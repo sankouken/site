@@ -1,0 +1,290 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+dl dt {
+  width: 25%;
+  text-align: center;
+}
+dl dd {
+  width: 75%;
+}
+
+.fixed-width {
+  font-family: "Liberation Serif", "Noto Sans CJK JP", "TakaoGothic", "VL Gothic", "Yu Gothic", "MS Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Osaka-Mono", "Noto Sans JP", Monospace;
+}
+
+body {
+  margin: 0;
+  font-size: 16pt;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body h7 {
+  font-family: "UDDigiKyokasho R JIS2004", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  font-weight: bold;
+}
+body hr {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 3px;
+}
+body > * {
+  display: block;
+  font-size: 12pt;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+body > * img {
+  max-width: 200px;
+}
+body img.logo {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+body img.logo.filter-white {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(315deg) brightness(102%) contrast(102%);
+}
+body > header {
+  display: block;
+  height: 0;
+}
+body > footer {
+  color: white;
+  font-family: "UDDigiKyokasho R JIS2004", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  background-color: #4d549a;
+  width: 100%;
+  max-width: 100%;
+}
+body > footer > section {
+  width: 900px;
+  margin: 0 auto;
+  padding: 1em 1em 2em;
+  min-height: 5em;
+  text-align: center;
+}
+body > footer > section > p {
+  text-align: center;
+}
+body > footer > section > p.auth {
+  display: block;
+  padding: 10px;
+}
+body > footer > section > p.auth img {
+  margin: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 2rem;
+}
+body > footer > section > p.copy {
+  font-size: xx-small;
+}
+body > footer > section ul {
+  padding: 0;
+}
+body > footer > section ul li {
+  display: inline-block;
+}
+body > footer > section ul li a {
+  padding: 0 0.2em;
+  color: white;
+  text-decoration: none;
+}
+body > footer > section ul li a:hover {
+  text-decoration: underline;
+}
+body > footer > section ul li::after {
+  content: "・";
+}
+body > footer > section ul li:last-of-type::after {
+  content: "";
+}
+body > nav ul {
+  font-family: "UDDigiKyokasho R JIS2004", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1em 0;
+  display: block;
+}
+body > nav ul li {
+  display: inline-block;
+  padding: 0 0.8em;
+  height: 2.5em;
+  line-height: 2.5em;
+  font-size: large;
+}
+body > nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+body > article#Cover {
+  max-width: 100%;
+  padding: 0 0 20px 0;
+}
+body > article#Cover section {
+  display: flex;
+  flex-direction: row;
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0px 1px 15px rgba(77, 84, 154, 0.3);
+}
+body > article#Cover section > * {
+  height: 520px;
+}
+body > article#Cover section > *#frontCover {
+  position: relative;
+  width: 60%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+body > article#Cover section > *#frontCover h1 {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  bottom: 8%;
+  text-align: center;
+  padding: 0;
+}
+body > article#Cover section > *#frontCover h1 img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(315deg) brightness(102%) contrast(102%) drop-shadow(0px 3px 5px #000);
+}
+body > article#Cover section > *#frontCover > img {
+  z-index: 1;
+  position: absolute;
+  max-width: none;
+  height: 150%;
+  display: none;
+  opacity: 0;
+}
+body > article#Cover section > *#frontCover > img.active {
+  display: block;
+}
+body > article#Cover section > *#innerCover {
+  width: 40%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > article#Cover section > *#innerCover > *#theFivePrecepts {
+  writing-mode: vertical-rl;
+  background-color: white;
+  font-family: "UDDigiKyokasho R JIS2004", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+body > article#Cover section > *#innerCover > *#theFivePrecepts h3 {
+  font-size: x-large;
+  display: block;
+  text-align: left;
+  text-indent: 2em;
+  font-size: 1.8rem;
+}
+body > article#Cover section > *#innerCover > *#theFivePrecepts ul {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+}
+body > article#Cover section > *#innerCover > *#theFivePrecepts ul li {
+  display: block;
+  text-align: left;
+  padding: 0;
+  width: 3.5rem;
+  line-height: 3.5em;
+}
+body > article#Cover section > *#innerCover > *#theFivePrecepts ul li::before {
+  content: "一、";
+}
+body > article > section {
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+body > article > section h2,
+body > article > section h3 {
+  text-align: center;
+}
+body > article > section h2 {
+  text-align: center;
+  font-size: 24pt;
+  height: 3em;
+}
+body > article > section dl dt {
+  display: inline-block;
+}
+body > article > section dl dd {
+  display: inline-block;
+}
+body > article > section .googleMap {
+  width: 600px;
+  height: 450px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 959px) {
+  /* 959px以下に適用されるCSS（タブレット用） */
+  body {
+    display: block;
+    padding: 0;
+    padding: 0;
+  }
+  body > * {
+    margin: 0 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  body > section .googleMap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  body > article#Cover > section {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  body > article#Cover > section > * {
+    width: 100vw;
+    max-width: 100vw;
+    height: 400px;
+  }
+  body > article#Cover > section > *#frontCover {
+    width: 100vw;
+    height: 75vw;
+  }
+  body > article#Cover > section > *#innerCover {
+    width: 100vw;
+  }
+  body > article#Cover > section > *#innerCover #theFivePrecepts ul li {
+    font-size: 1.2rem;
+    width: 2.5rem;
+    line-height: 2.5em;
+  }
+  body > footer > section {
+    width: 100vw;
+  }
+}/*# sourceMappingURL=style.css.map */

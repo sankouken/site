@@ -1,20 +1,10 @@
 $(function () {
-    // Tap to Scroll
-    $('a[href^="#"]').on('click', function () {
-        var speed = 100; // スクロール速度(ミリ秒)
-        var href = $(this).attr('href');
-        var target = $(href == '#' || href == '' ? 'html' : href);
-        var position = target.offset().top;
-        //$('html').animate({ scrollTop: position }, speed, 'swing');
-        $('html').animate({ scrollTop: position }, speed, 'linear');
-        return false;
-    });
-
     let _timerCoverArt = 0;
     let _timerCoverArtInterval = 3000;
     const _fadeDurationMsec = 5000;
     const $frontCover = $('#Cover .front');
 
+    // Cover Art
     const ChangeCoverArt = function () {
         let $active = $frontCover.find('img.active');
         let $next = $active.next('img');
@@ -23,7 +13,6 @@ $(function () {
                 $active.fadeOut(_fadeDurationMsec, () => {
                     $active.removeClass('active');
                 });
-
                 $next.show().animate(
                     {
                         height: '100%',
@@ -35,8 +24,10 @@ $(function () {
                         $next.addClass('active');
                     }
                 );
-
-                _timerCoverArt = setTimeout(ChangeCoverArt, _timerCoverArtInterval);
+                _timerCoverArt = setTimeout(
+                    ChangeCoverArt,
+                    _timerCoverArtInterval
+                );
             }, 3000);
         } else {
             _timerCoverArt = 0;
@@ -55,7 +46,20 @@ $(function () {
             _fadeDurationMsec,
             false,
             () => {
-                _timerCoverArt = setTimeout(ChangeCoverArt, _timerCoverArtInterval);
+                _timerCoverArt = setTimeout(
+                    ChangeCoverArt,
+                    _timerCoverArtInterval
+                );
             }
         );
+
+    // Tap to Scroll
+    $('a[href^="#"]').on('click', function () {
+        var speed = 100; // スクロール速度(ミリ秒)
+        var href = $(this).attr('href');
+        var target = $(href == '#' || href == '' ? 'html' : href);
+        var position = target.offset().top;
+        $('html').animate({ scrollTop: position }, speed, 'linear');
+        return false;
+    });
 });

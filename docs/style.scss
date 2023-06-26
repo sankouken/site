@@ -1,19 +1,22 @@
-$fontSize: 12pt;
+$fontSize: 16pt;
 
 $maxWidth: 900px;
 
 $colorKon: #4d549a;
 
-$fontSet-Serif: 'UDDigiKyokasho R JIS2004', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝',
-    'Yu Mincho', '游明朝体', 'YuMincho', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+$fontSet-Serif: 'UDDigiKyokasho R JIS2004', 'ヒラギノ明朝 Pro W3',
+    'Hiragino Mincho Pro', '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho',
+    'ＭＳ Ｐ明朝', 'MS PMincho', serif;
 
-$fontSet-SansSerif: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo',
-    '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$fontSet-SansSerif: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+    'メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック',
+    'MS PGothic', sans-serif;
 
 $fontSet-Monospace: 'Liberation Serif', 'Noto Sans CJK JP',
-    /* Linux/Android/ChromeOS */ 'TakaoGothic', 'VL Gothic', /* Debian/Ubuntu */ 'Yu Gothic',
-    'MS Gothic', /* Windows */ 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Osaka-Mono',
-    /* Mac/iOS */ 'Noto Sans JP', Monospace;
+    /* Linux/Android/ChromeOS */ 'TakaoGothic', 'VL Gothic',
+    /* Debian/Ubuntu */ 'Yu Gothic', 'MS Gothic', /* Windows */ 'Hiragino Sans',
+    'Hiragino Kaku Gothic ProN', 'Osaka-Mono', /* Mac/iOS */ 'Noto Sans JP',
+    Monospace;
 
 // google fonts Hannari
 $fontsSet-Hannari: 'Hannari', $fontSet-Serif;
@@ -87,8 +90,8 @@ body {
         margin: 0 auto;
 
         &.filter-white {
-            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(315deg) brightness(102%)
-                contrast(102%);
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(315deg)
+                brightness(102%) contrast(102%);
         }
     }
 
@@ -108,9 +111,10 @@ body {
         > section {
             width: $maxWidth;
             margin: 0 auto;
-            padding: 1em 1em 2em;
-            min-height: 5em;
 
+            padding: 1em 1em 2em;
+
+            min-height: 5em;
             text-align: center;
 
             > p {
@@ -192,6 +196,54 @@ body {
     }
 
     > article {
+        // 本文
+        > section {
+            border: 1px solid red;
+
+            margin: 0.5rem 0 1em;
+            padding: 2em 20px;
+            border-radius: 10px;
+
+            h2,
+            h3 {
+                text-align: center;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 24pt;
+                height: 3em;
+            }
+
+            p {
+                max-width: 35em;
+                margin: 0 auto;
+            }
+
+            dl {
+                dt {
+                    display: inline-block;
+                }
+
+                dd {
+                    display: inline-block;
+                }
+            }
+
+            .googleMap {
+                width: 600px;
+                height: 450px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            a {
+                img {
+                    display: inline-block;
+                }
+            }
+        }
+
         // 表紙
         &#Cover {
             $coverHight: 520px;
@@ -233,8 +285,9 @@ body {
                             padding: 0;
 
                             img {
-                                filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(315deg)
-                                    brightness(102%) contrast(102%) drop-shadow(0px 3px 5px #000);
+                                filter: invert(100%) sepia(0%) saturate(0%)
+                                    hue-rotate(315deg) brightness(102%)
+                                    contrast(102%) drop-shadow(0px 3px 5px #000);
                             }
                         }
 
@@ -299,39 +352,6 @@ body {
                         }
                     }
                 }
-            }
-        }
-
-        > section {
-            padding: 15px 20px;
-            border-radius: 10px;
-
-            h2,
-            h3 {
-                text-align: center;
-            }
-
-            h2 {
-                text-align: center;
-                font-size: 24pt;
-                height: 3em;
-            }
-
-            dl {
-                dt {
-                    display: inline-block;
-                }
-
-                dd {
-                    display: inline-block;
-                }
-            }
-
-            .googleMap {
-                width: 600px;
-                height: 450px;
-                display: block;
-                margin: 0 auto;
             }
         }
     }

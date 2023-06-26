@@ -42,7 +42,7 @@ body hr {
 }
 body > * {
   display: block;
-  font-size: 12pt;
+  font-size: 16pt;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   max-width: 900px;
   margin: 0 auto;
@@ -136,6 +136,40 @@ body > nav ul li a {
   font-weight: bold;
   color: black;
 }
+body > article > section {
+  border: 1px solid red;
+  margin: 0.5rem 0 1em;
+  padding: 2em 20px;
+  border-radius: 10px;
+}
+body > article > section h2,
+body > article > section h3 {
+  text-align: center;
+}
+body > article > section h2 {
+  text-align: center;
+  font-size: 24pt;
+  height: 3em;
+}
+body > article > section p {
+  max-width: 35em;
+  margin: 0 auto;
+}
+body > article > section dl dt {
+  display: inline-block;
+}
+body > article > section dl dd {
+  display: inline-block;
+}
+body > article > section .googleMap {
+  width: 600px;
+  height: 450px;
+  display: block;
+  margin: 0 auto;
+}
+body > article > section a img {
+  display: inline-block;
+}
 body > article#Cover {
   max-width: 100%;
   padding: 0 0 20px 0;
@@ -215,31 +249,6 @@ body > article#Cover section > *#innerCover > *#theFivePrecepts ul li {
 }
 body > article#Cover section > *#innerCover > *#theFivePrecepts ul li::before {
   content: "一、";
-}
-body > article > section {
-  padding: 15px 20px;
-  border-radius: 10px;
-}
-body > article > section h2,
-body > article > section h3 {
-  text-align: center;
-}
-body > article > section h2 {
-  text-align: center;
-  font-size: 24pt;
-  height: 3em;
-}
-body > article > section dl dt {
-  display: inline-block;
-}
-body > article > section dl dd {
-  display: inline-block;
-}
-body > article > section .googleMap {
-  width: 600px;
-  height: 450px;
-  display: block;
-  margin: 0 auto;
 }
 
 @media screen and (max-width: 959px) {

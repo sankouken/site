@@ -198,7 +198,7 @@ body {
     > article {
         // 本文
         > section {
-            border: 1px solid red;
+            // border: 1px solid red;
 
             margin: 0.5rem 0 1em;
             padding: 2em 20px;
@@ -212,15 +212,25 @@ body {
             h2 {
                 text-align: center;
                 font-size: 24pt;
-                height: 3em;
+                margin: 1em 0;
+            }
+
+            h3 {
+                margin: 1.2em;
             }
 
             p {
-                max-width: 35em;
+                max-width: 32em;
                 margin: 0 auto;
-            }
+                line-height: 1.6em;
 
+                &.center {
+                    text-align: center;
+                }
+            }
             dl {
+                margin: 0 auto;
+
                 dt {
                     display: inline-block;
                 }
@@ -228,6 +238,10 @@ body {
                 dd {
                     display: inline-block;
                 }
+            }
+
+            > table {
+                margin: 0 auto;
             }
 
             .googleMap {

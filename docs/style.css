@@ -137,7 +137,6 @@ body > nav ul li a {
   color: black;
 }
 body > article > section {
-  border: 1px solid red;
   margin: 0.5rem 0 1em;
   padding: 2em 20px;
   border-radius: 10px;
@@ -149,10 +148,20 @@ body > article > section h3 {
 body > article > section h2 {
   text-align: center;
   font-size: 24pt;
-  height: 3em;
+  margin: 1em 0;
+}
+body > article > section h3 {
+  margin: 1.2em;
 }
 body > article > section p {
-  max-width: 35em;
+  max-width: 32em;
+  margin: 0 auto;
+  line-height: 1.6em;
+}
+body > article > section p.center {
+  text-align: center;
+}
+body > article > section dl {
   margin: 0 auto;
 }
 body > article > section dl dt {
@@ -160,6 +169,9 @@ body > article > section dl dt {
 }
 body > article > section dl dd {
   display: inline-block;
+}
+body > article > section > table {
+  margin: 0 auto;
 }
 body > article > section .googleMap {
   width: 600px;

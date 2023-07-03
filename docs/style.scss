@@ -227,6 +227,10 @@ body {
                 &.center {
                     text-align: center;
                 }
+
+                &.small {
+                    font-size: 80%;
+                }
             }
             dl {
                 margin: 0 auto;
@@ -237,18 +241,49 @@ body {
 
                 dd {
                     display: inline-block;
+                    width: fit-content;
+                    line-break: auto;
                 }
             }
 
             > table {
-                margin: 0 auto;
+                margin: 0.5em auto;
+
+                tr {
+                    * {
+                        padding: 0.2em 0.5em;
+                        font-weight: normal;
+                        vertical-align: top;
+                    }
+                }
             }
 
-            .googleMap {
-                width: 600px;
-                height: 450px;
-                display: block;
-                margin: 0 auto;
+            .flyer {
+                margin: 0.5em auto;
+                width: fit-content;
+            }
+
+            iframe {
+                margin: 0.5em auto;
+
+                &#googleCalendar {
+                    $w: 500px;
+                    $h: 450px;
+
+                    display: block;
+
+                    width: $w;
+                    max-width: 100%;
+                    height: $h;
+                    max-height: $h;
+                }
+
+                &#googleMap {
+                    width: 600px;
+                    max-width: 100%;
+                    height: 450px;
+                    display: block;
+                }
             }
 
             a {
@@ -400,6 +435,10 @@ body {
 
     body {
         > article {
+            > section {
+                font-size: 12pt !important;
+            }
+
             &#Cover {
                 > section {
                     width: 100vw;

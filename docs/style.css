@@ -161,6 +161,9 @@ body > article > section p {
 body > article > section p.center {
   text-align: center;
 }
+body > article > section p.small {
+  font-size: 80%;
+}
 body > article > section dl {
   margin: 0 auto;
 }
@@ -169,15 +172,38 @@ body > article > section dl dt {
 }
 body > article > section dl dd {
   display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-break: auto;
 }
 body > article > section > table {
-  margin: 0 auto;
+  margin: 0.5em auto;
 }
-body > article > section .googleMap {
+body > article > section > table tr * {
+  padding: 0.2em 0.5em;
+  font-weight: normal;
+  vertical-align: top;
+}
+body > article > section .flyer {
+  margin: 0.5em auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body > article > section iframe {
+  margin: 0.5em auto;
+}
+body > article > section iframe#googleCalendar {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  height: 450px;
+  max-height: 450px;
+}
+body > article > section iframe#googleMap {
   width: 600px;
+  max-width: 100%;
   height: 450px;
   display: block;
-  margin: 0 auto;
 }
 body > article > section a img {
   display: inline-block;
@@ -282,6 +308,9 @@ body > article#Cover section > *#innerCover > *#theFivePrecepts ul li::before {
 }
 @media screen and (max-width: 480px) {
   /* 480px以下に適用されるCSS（スマホ用） */
+  body > article > section {
+    font-size: 12pt !important;
+  }
   body > article#Cover > section {
     width: 100vw;
     height: auto;
